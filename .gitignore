@@ -3,3 +3,4 @@ venv/
 cookies.json
 .direnv
 .vscode
+init.conf
