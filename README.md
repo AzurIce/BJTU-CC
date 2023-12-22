@@ -1,12 +1,10 @@
-首先使用 `--login` 参数运行，手动登陆、保存 cookies：
+示例用法：
 
 ```
-python main.py --login
+python main.py --login --current
 ```
 
-应该会出现一个 `cookies.json`。
+`--login` 表示手动登陆并保存 cookies 到 `cookies.json`
+`--current` 表示本学期课程
 
-
-
-然后
-
+响铃只兼容 Mac，其他系统自己注释下，暂时没空改
