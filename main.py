@@ -11,7 +11,16 @@ from selenium.webdriver.common.by import By
 COURSES = [('C112002B', 2)]
 
 def ring():
-    os.system("afplay /System/Library/Sounds/Ping.aiff")
+    if sys.platform == 'darwin':
+        os.system("afplay /System/Library/Sounds/Ping.aiff")
+    elif sys.platform == 'windows':
+        import winsound
+        winsound.Beep(800, 1000)
+    elif sys.platform.startswith('linux'):
+        for i in range(3):
+            sys.stdout.write('\a')  # 发送响铃的 ANSI 转义码
+            sys.stdout.flush()      # 刷新输出缓冲区以确保立即生效
+            time.sleep(0.3)
 
 class sound(threading.Thread):
     def __init__(self):
@@ -161,8 +170,8 @@ def phase2(driver, courses: [(str, int)]):
                 if keep_running == 'y':
                     exit(0)
             except Exception as e:
-                pass
                 # print(e)
+                pass
 
             time.sleep(0.3)
 
