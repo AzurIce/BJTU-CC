@@ -9,6 +9,22 @@ BJTU 的选课脚本
 - 人工输入验证码并提交。
 - 输入 y/n 来退出
 
+## 依赖
+
+Python3（我用的 3.11）
+
+MacOS/Linux:
+
+```
+pip install selenium
+```
+
+Windows:
+
+```
+pip install selenium winsound
+```
+
 ## 用法
 
 首先编辑 `main.py` 中的 `COURSES` 变量，内容为 `(课程号, 编号)` 元组的列表。
