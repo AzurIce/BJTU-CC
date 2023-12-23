@@ -32,7 +32,7 @@ pip install selenium winsound
 然后执行：
 
 ```
-python main.py --login --phase=1
+python main.py --login --phase 1
 ```
 
 - `--login` 表示手动登陆并保存 cookies 到 `cookies.json`
